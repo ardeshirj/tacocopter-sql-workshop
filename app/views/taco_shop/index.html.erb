@@ -1,0 +1,29 @@
+<%= form_tag'/taco_shop/search', method: 'get' do %>
+  <h2>Select Tacos to Find:</h2>
+  <%= collection_check_boxes(
+    :stores_tacos,
+    :taco_ids,
+    Taco.all,
+    :id,
+    :name) do |b| %>
+    <%= b.check_box %>
+    <%= b.label %>
+    </br>
+  <% end %>
+
+  <h2>Select Sauces to Find:</h2>
+  <%= collection_check_boxes(
+    :stores_salsas,
+    :salsa_ids,
+    Salsa.all,
+    :id,
+    :name) do |b| %>
+    <%= b.check_box %>
+    <%= b.label %>
+    </br>
+  <% end %>
+
+  </br>
+
+  <%= submit_tag("Search") %>
+<% end %>
