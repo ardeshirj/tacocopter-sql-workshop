@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  city_id: 1
+  sells_beer: false
+  zagat_rating: 1
+
+two:
+  name: MyString
+  city_id: 1
+  sells_beer: false
+  zagat_rating: 1
