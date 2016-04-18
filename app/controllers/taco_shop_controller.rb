@@ -1,0 +1,2 @@
+class TacoShopController < ApplicationController
+end
