@@ -5,4 +5,6 @@ class Store < ActiveRecord::Base
 
   has_many :stores_salsas
   has_many :salsas, through: :stores_salsas
+
+  belongs_to :city
 end
