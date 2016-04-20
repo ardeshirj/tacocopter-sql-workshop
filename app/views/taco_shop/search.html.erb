@@ -1,1 +1,18 @@
-<h2>Stores matching your requirements<h2>
+<h2>Stores matching your requirements</h2>
+
+<% if @stores.nil? %>
+  <h3>Sorry there is no any taco shops to meet the requirements :(</h3>
+<% else %>
+  <table border='1' style='width:50%'>
+    <tr>
+      <th>Store</th>
+      <th>City</th>
+    </tr>
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.name %></td>
+        <td><%= store.city.name %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
