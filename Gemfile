@@ -25,10 +25,15 @@ gem 'jbuilder', '~> 2.0'
 gem 'rails_12factor'
 gem 'text-table'
 
-group :development, :test do
+group :development do
   gem 'pry-rails'
   # Spring speeds up development by keeping your application
   # running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  # gem 'sqlite3', '~> 1.3'
   gem 'rspec-rails', '~> 3.4'
+  gem 'simplecov', '~> 0.11.2'
 end
