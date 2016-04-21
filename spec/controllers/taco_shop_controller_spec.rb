@@ -34,7 +34,7 @@ RSpec.describe TacoShopController, type: :controller do
       expect(assigns(:stores).map(&:id)).to eq(expected)
     end
 
-    it 'should return invalid store errors' do
+    it 'should return invalid store' do
       get :search, store: { taco_ids: [1, 3] }
       expect(response).to have_http_status(:ok)
       expect(response).to render_template('index')

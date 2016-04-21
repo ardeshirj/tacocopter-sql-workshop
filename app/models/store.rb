@@ -9,5 +9,8 @@ class Store < ActiveRecord::Base
   belongs_to :city
 
   validates :tacos, presence: true
+  validates_associated :tacos
+
   validates :salsas, presence: true
+  validates_associated :salsas
 end
