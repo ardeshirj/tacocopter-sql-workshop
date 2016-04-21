@@ -27,7 +27,7 @@ RSpec.describe TacoShopController, type: :controller do
 
   describe 'GET search' do
     it 'should return the stores' do
-      expected = [1, 4, 6, 7, 11, 12]
+      expected = [1, 4, 6, 7, 12]
       get :search, store: { taco_ids: [1, 3], salsa_ids: [1] }
       expect(response).to have_http_status(:ok)
       expect(response).to render_template('search')
