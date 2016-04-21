@@ -10,7 +10,6 @@ class TacoShopController < ApplicationController
     @store = Store.new(store_params)
     if @store.valid?
       stores_id = find_stores(@store)
-      p stores_id
       @stores = Store.includes(:city).where(id: stores_id.map(&:id))
       render 'search'
     else

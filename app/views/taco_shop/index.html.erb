@@ -1,4 +1,5 @@
 <%= form_for @store, url: {action: 'search'},  method: 'get' do |f| %>
+
   <% if @store.errors.any? %>
     <h2> Errors: </h2>
     <ul>
@@ -27,4 +28,5 @@
   </br>
 
   <%= f.submit('Search') %>
+
 <% end %>
