@@ -18,3 +18,6 @@
 config/database.yml
 ._*
 .DS_Store
+
+# Ignore test coverage result by simplecov
+coverage
