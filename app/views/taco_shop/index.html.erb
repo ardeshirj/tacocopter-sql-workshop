@@ -1,18 +1,24 @@
-<%= form_tag'/taco_shop/search', method: 'get' do %>
+<%= form_for @store, url: {action: 'search'},  method: 'get' do |f| %>
+  <% if @store.errors.any? %>
+    <h2> Errors: </h2>
+    <ul>
+      <% @store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
   <h2>Select Tacos to Find:</h2>
-  <%= collection_check_boxes(
-    :stores_tacos, :taco_ids, Taco.all, :id, :name,
-    {include_hidden: false}) do |b| %>
+  <%= f.collection_check_boxes(
+    :taco_ids, Taco.all, :id, :name) do |b| %>
       <%= b.check_box %>
       <%= b.label %>
     </br>
   <% end %>
 
   <h2>Select Sauces to Find:</h2>
-  <%= collection_check_boxes(
-    :stores_salsas, :salsa_ids, Salsa.all, :id, :name,
-    {include_hidden: false}) do |b| %>
+  <%= f.collection_check_boxes(
+    :salsa_ids, Salsa.all, :id, :name) do |b| %>
       <%= b.check_box %>
       <%= b.label %>
     </br>
@@ -20,5 +26,5 @@
 
   </br>
 
-  <%= submit_tag("Search") %>
+  <%= f.submit('Search') %>
 <% end %>

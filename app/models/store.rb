@@ -7,4 +7,7 @@ class Store < ActiveRecord::Base
   has_many :salsas, through: :stores_salsas
 
   belongs_to :city
+
+  validates :tacos, presence: true
+  validates :salsas, presence: true
 end
