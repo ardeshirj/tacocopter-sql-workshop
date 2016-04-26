@@ -1,8 +1,6 @@
 # TacoShop controller
 class TacoShopController < ApplicationController
   def index
-    @tacos = Taco.all
-    @salsas = Salsa.all
     @store = Store.new
   end
 

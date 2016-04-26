@@ -10,16 +10,14 @@
   <% end %>
 
   <h2>Select Tacos to Find:</h2>
-  <%= f.collection_check_boxes(
-    :taco_ids, Taco.all, :id, :name) do |b| %>
+  <%= f.collection_check_boxes(:taco_ids, Taco.all, :id, :name) do |b| %>
       <%= b.check_box %>
       <%= b.label %>
     </br>
   <% end %>
 
   <h2>Select Sauces to Find:</h2>
-  <%= f.collection_check_boxes(
-    :salsa_ids, Salsa.all, :id, :name) do |b| %>
+  <%= f.collection_check_boxes(:salsa_ids, Salsa.all, :id, :name) do |b| %>
       <%= b.check_box %>
       <%= b.label %>
     </br>

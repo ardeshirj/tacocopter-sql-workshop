@@ -2,18 +2,6 @@ require 'rails_helper'
 
 RSpec.describe TacoShopController, type: :controller do
   describe 'GET index' do
-    it 'assigns list of all tacos' do
-      tacos = Taco.all
-      get :index
-      expect(assigns(:tacos)).to eq(tacos)
-    end
-
-    it 'assigns list of all salsas' do
-      salsas = Salsa.all
-      get :index
-      expect(assigns(:salsas)).to eq(salsas)
-    end
-
     it 'assigns new store' do
       get :index
       expect(assigns(:store)).to be_a_new(Store)
