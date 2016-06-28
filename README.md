@@ -1,14 +1,16 @@
-# tacocopter-sql-workshop
+Forked from [Procore github page](https://github.com/procore) for `Taco Shops` interview.
+
+# Tacocopter SQL Workshop
 - Connecting
 - Schema
 - Questions
-- Search for Taco Shops
+- Search for Taco Shops - Added for `Taco Shops` interview
 
 ## Setup
 ```sh
 bundle install
 cp config/database.yml.example config/database.yml
-# Update database.yml with your db configuration
+# Update config/database.yml with your db configuration
 rake db:setup
 ```
 
@@ -25,8 +27,4 @@ rspec spec
 # Test coverage report is at: coverage/index.html
 ```
 
-The site is deployed at Heroku in [here](https://limitless-sands-79414.herokuapp.com)
-
-Slides are <a href=https://docs.google.com/presentation/d/1Y3gWwABlmSjAeZrBflAhUv-6m2nDRY8FYxvswJal4D0/edit?usp=sharing">here</a>
-
-Written in Ruby on Rails. If you'd like to contribute, just open an issue or open a pull request and notify Brad Urani.
+The site is deployed at Heroku [here](https://limitless-sands-79414.herokuapp.com)
